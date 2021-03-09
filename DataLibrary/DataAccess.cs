@@ -21,7 +21,7 @@ namespace DataLibrary
             }
 
         }
-        public  Task SaveData<T>(string sql, T parameters, string connectionString)
+        public  Task<int> SaveData<T>(string sql, T parameters, string connectionString)
         {
             using (IDbConnection connection = new MySqlConnection(connectionString))
             {
